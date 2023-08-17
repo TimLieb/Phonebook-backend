@@ -8,7 +8,9 @@
         "dev": "nodemon index.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build:ui": "@powershell Remove-Item -Recurse -Force build && cd ../fullstackopen/phonebook/ && npm run build && @powershell Copy-Item build -Recurse ../../Phonebook-backend",
-        "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+        "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+        "build:np": "cd ../fullstackopen/phonebook/ && npm run build && @powershell Copy-Item build -Recurse ../../Phonebook-backend",
+        "build:copy": "cd ../fullstackopen/phonebook/ && @powershell Copy-Item build -Recurse ../../Phonebook-backend"
     },
     "author": "",
     "license": "ISC",
